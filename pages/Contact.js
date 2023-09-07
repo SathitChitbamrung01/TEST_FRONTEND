@@ -1,17 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-import Script from 'next/script';
+import Image from 'next/image';
 import Link from 'next/link';
-import { useSession, signIn, signOut } from "next-auth/react"
-
-export default function index() {
+export default function Contact() {
   return (
     <>
     <Head>
       <title>Home Comin</title>
     </Head>
-
     <div>
     <header>
 <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -48,105 +44,59 @@ export default function index() {
   </div>
 </nav>
 </header>
-
     </div>
 
-<main>
-    <div id="carouselExampleDark" className="carousel carousel-dark slide">
-  <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to={0} className="active" aria-current="true" aria-label="Slide 1" />
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to={1} aria-label="Slide 2" />
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to={2} aria-label="Slide 3" />
-  </div>
-  <div className="carousel-inner">
-    <div className="carousel-item active" data-bs-interval={2000}>
-      <img src="/slider(1).jpg" className="d-block w-100" alt="slider(1)" />
-      <div className="carousel-caption d-none d-md-block">
+  <div className="b-example-divider" />
+  <div className="container px-4 py-5">
+    <h2 className="pb-2 border-bottom">ช่องทางการติดต่อ</h2>
+    <div className="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div className="col d-flex flex-column align-items-start gap-2">
+      <img src="PRO.jpg" width={445} height={550} />
+      </div>
+      <div className="col">
+        <div className="row row-cols-1 row-cols-sm-2 g-4">
+          <div className="col d-flex flex-column gap-2">
+            <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+              <svg className="bi" width="1em" height="1em">
+                <use xlinkHref="#collection" />
+              </svg>
+            </div>
+            <h4 className="fw-semibold mb-0 text-body-emphasis">Facebook</h4>
+            <p className="text-body-secondary">Satht Chitbamrung</p>
+          </div>
+          <div className="col d-flex flex-column gap-2">
+            <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+              <svg className="bi" width="1em" height="1em">
+                <use xlinkHref="#gear-fill" />
+              </svg>
+            </div>
+            <h4 className="fw-semibold mb-0 text-body-emphasis">Instagram</h4>
+            <p className="text-body-secondary">Satht_Chitbamrung</p>
+          </div>
+          <div className="col d-flex flex-column gap-2">
+            <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+              <svg className="bi" width="1em" height="1em">
+                <use xlinkHref="#speedometer" />
+              </svg>
+            </div>
+            <h4 className="fw-semibold mb-0 text-body-emphasis">Line</h4>
+            <p className="text-body-secondary">Satithrk1416@gmail.co</p>
+          </div>
+          <div className="col d-flex flex-column gap-2">
+            <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+              <svg className="bi" width="1em" height="1em">
+                <use xlinkHref="#table" />
+              </svg>
+            </div>
+            <h4 className="fw-semibold mb-0 text-body-emphasis">Phone</h4>
+            <p className="text-body-secondary">081-734-5543</p>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div className="carousel-item" data-bs-interval={2000}>
-      <img src="/slider(2).jpg" className="d-block w-100" alt="slider(2)" />
-      <div className="carousel-caption d-none d-md-block">
-      </div>
-    </div>
-
-    <div className="carousel-item">
-      <img src="/slider(3).jpg" className="d-block w-100" alt="slider(3)" />
-      <div className="carousel-caption d-none d-md-block">
-      </div>
-    </div>
   </div>
 
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true" />
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true" />
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-
-<br/>
-
-<div className="container marketing">
-  <div className="row">
-    <div className="col-lg-4">
-      <img className='bd-placeholder-img rounded-circle' width={140} height={140} src='LOGO(1).png'></img>
-      <h2 className="fw-normal">Phoenix Next</h2>
-      <p><Link className="btn btn-secondary" href="https://www.phoenixnext.com/">View details »</Link></p>
-    </div>
-    <div className="col-lg-4">
-      <img className='bd-placeholder-img rounded-circle' width={140} height={140} src='LOGO(2).png'></img>      
-      <h2 className="fw-normal">Luckpim</h2>
-      <p><Link className="btn btn-secondary" href="https://www.facebook.com/Luckpim/?locale=th_TH/">View details »</Link></p>
-    </div>
-    <div className="col-lg-4">
-      <img className='bd-placeholder-img rounded-circle' width={140} height={140} src='LOGO(3).png'></img>  
-      <h2 className="fw-normal">first page pro</h2>
-      <p><Link className="btn btn-secondary" href="http://www.firstpagepro.com/">View details »</Link></p>
-    </div>
-  </div>
-  <hr className="featurette-divider" />
-  <div className="row featurette">
-    <div className="col-md-7">
-      <h2 className="featurette-heading fw-normal lh-1">Phoenix Next<span className="text-body-secondary"></span></h2>
-      <p className="lead">กลับมาเจออีกครั้งกับกิจกรรมประจำเดือน เตรียมพบกับลิขสิทธิ์ใหม่จากสำนักพิมพ์ phoenix ประจำเดือนกรกฎาคม 2023 ตั้งแต่วันพรุ่งนี้เป็นต้นไปจ้า</p>
-    </div>
-    <div className="col-md-5">
-      <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width={500} height={500} src='Book(1).jpg'></img>
-    </div>
-  </div>
-  <hr className="featurette-divider" />
-  <div className="row featurette">
-    <div className="col-md-7 order-md-2">
-      <h2 className="featurette-heading fw-normal lh-1">Luckpim<span className="text-body-secondary"></span></h2>
-      <p className="lead">ประกาศเติมสต็อกวันนี้ </p>
-      <p className='lead'>" วัดป่วนชวนมารัก" เล่ม 1-4 วางจำหน่ายแล้ววันนี้บนร้านค้าออนไลน์และร้านหนังสือทั่วไป</p>
-    </div>
-    <div className="col-md-5 order-md-1">
-    <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width={500} height={500} src='Book(2).jpg'></img>
-    </div>
-  </div>
-  <hr className="featurette-divider" />
-  <div className="row featurette">
-    <div className="col-md-7">
-      <h2 className="featurette-heading fw-normal lh-1">first page pro<span className="text-body-secondary">.</span></h2>
-      <p className="lead">📣📣📣 สินค้าออกใหม่ประจำสัปดาห์ 📣📣📣</p>
-      <p className="lead">เอฟจังเอาความนุ่มฟูมาเสิร์ฟทุกคนแล้วค่า</p>
-      <p className="lead">🌠 การ์ตูน คุณพนักงานคะ รับน้องผีไปช่วยเยียวยาไหมคะ เล่ม 3</p>
-      <p className="lead">💵 เล่มละ 120 บาท </p>
-    </div>
-    <div className="col-md-5">
-    <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width={500} height={500} src='Book(3).jpg'></img>
-    </div>
-  </div>
-  <hr className="featurette-divider" />
-</div>
-</main>
-
-<footer className="container">
+  <footer className="container">
 <div>
   <div className="b-example-divider" />
   <div className="container">
@@ -205,8 +155,8 @@ export default function index() {
     </footer>
   </div>
 </div>
-
 </footer>
+
     </>
   )
 }
