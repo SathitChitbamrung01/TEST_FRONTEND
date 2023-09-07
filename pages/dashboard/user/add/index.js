@@ -26,7 +26,7 @@ export default function Component({ posts }) {
     console.log("password :", jsonData.password);
     console.log("status:", jsonData.studentid);
 
-    fetch(`test-frontend-snowy-seven.vercel.app/api/users/`, {
+    fetch(`https://test-frontend-snowy-seven.vercel.app/api/users/`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
